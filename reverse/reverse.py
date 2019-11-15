@@ -51,8 +51,8 @@ class LinkedList:
       return
     current = self.head
     while current:
-      current = current.get_next()
       value = current.value
+      current = current.get_next()
       self.add_to_head(value)
     
     # current = self.head
