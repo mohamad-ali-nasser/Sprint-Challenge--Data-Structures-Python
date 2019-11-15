@@ -43,5 +43,28 @@ class LinkedList:
     return False
 
   def reverse_list(self):
-    # TO BE COMPLETED
-    pass
+    """
+    take last item insert to head, make next as current -----> Recursively.
+    """
+
+    if not self.head:
+      return
+    current = self.head
+    while current:
+      current = current.get_next()
+      value = current.value
+      self.add_to_head(value)
+    
+    # current = self.head
+
+
+
+    # value = self.tail
+    # self.add_to_head()
+    # then take the last item insert to next of head, naow make head at current 
+    # node = Node(value).get_next()
+    # value = node.value
+    # node.add_to_head(value)
+
+# LinkedList().add_to_head(2)
+# print(Node().get_value())
